@@ -5,8 +5,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import OneHotEncoder
 
 X, y = fetch_openml(data_id=40691, as_frame=True, return_X_y=True)
-enc = OneHotEncoder(handle_unknown='ignore')
-X = enc.fit_transform(X)
 
 X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, random_state=42)
 
